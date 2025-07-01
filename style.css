@@ -973,3 +973,153 @@ section {
         padding: 70px;
     }
 }
+.certificates {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #081b29; /* match theme */
+}
+
+.certificate-text {
+  max-width: 800px;
+  text-align: center;
+  color: #ededed;
+  margin-bottom: 40px;
+}
+
+.certificate-text h2 {
+  font-size: 60px;
+  color: #ededed;
+}
+
+.certificate-text h2 span {
+  color: #0ef;
+}
+
+.certificate-text h4 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #ededed;
+}
+
+.certificate-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.certificate-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+  max-width: 1100px;
+  justify-content: center;
+  position: relative;
+}
+
+/* Individual Certificate Card */
+.certificate-card {
+  background: #0e1a2b;
+  border: 2px solid #0ef;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 238, 255, 0.2);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.certificate-card:hover {
+  transform: translateY(-10px);
+}
+
+.certificate-card h3 {
+  color: #0ef;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.certificate-card p {
+  color: #aaa;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.certificate-card a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0ef;
+  color: #000;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.certificate-card a:hover {
+  background: #00cfcf;
+}
+
+/* View All Button */
+.view-more-wrapper {
+  grid-column: span 3;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#viewAllBtn {
+  background: #0ef;
+  color: #000;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#viewAllBtn:hover {
+  background: #00cfcf;
+}
+
+/* Hide extra certificates initially */
+.extra-certificate {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .certificate-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .view-more-wrapper {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .certificate-card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .view-more-wrapper {
+    grid-column: span 1;
+  }
+
+  .certificate-text h2 {
+    font-size: 40px;
+  }
+
+  .certificate-text h4 {
+    font-size: 20px;
+  }
+
+  .certificate-text p {
+    font-size: 16px;
+  }
+}
